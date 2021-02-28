@@ -23,3 +23,26 @@ This project should work for most (if not all) 3D printers.  However, it was cre
 *Note, will not work on other Raspberry Pi's since they do not support USB OTG.
 
 ## Setup Instructions
+
+
+
+Step 1. Download the latest [release](https://github.com/tds2021/Pi-Zero-W-Smart-USB-Flash-Drive/releases/tag/v1.0-beta).
+
+Step 2. Extract the image from the zip archive.
+
+Step 3. 
+
+(MacOS) Connect the MicroSD card to your computer and flash the usb_share image using [balenaEtcher](https://www.balena.io/etcher/).
+
+#### or
+
+Connect the MicroSD card to your computer and flash the usb_share image.
+```
+diskutil list
+sudo diskutil unmountDisk /dev/diskN
+sudo dd bs=1m if=path_of_your_image of=/dev/rdiskN; sync
+```
+
+(Windows) Connect the MicroSD card to your computer and flash the usb_share image using [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/).
+
+Step 5. Edit the wpa_supplicant.conf file provided, changing the placeholders network and password to your wireless networks SSID and password.
