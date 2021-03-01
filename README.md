@@ -11,7 +11,7 @@ This project is not an original idea.  It is based on the work documented in the
 * Create AnyCubic WIFI.txt file based on the Raspberry PI's configuration
 
 ## Printer Support
-This project should work for most (if not all) 3D printers.  However, it was created with the [ANYCUBIC Photon Mono X](https://www.anycubic.com/products/photon-mono-x-resin-printer) in mind. There is an optional service that can be enabled to dynamically create a WIFI.txt file in the ANYCUBIC format to help configure the printer to match the netowrk configured on the Raspberry Pi W.
+This project should work for most (if not all) 3D printers.  However, it was created with the [ANYCUBIC Photon Mono X](https://www.anycubic.com/products/photon-mono-x-resin-printer) in mind. There is an optional service that can be enabled to dynamically create a WIFI.txt file in the ANYCUBIC format to help configure the printer to match the network configured on the Raspberry Pi W.
 
 ## Prerequisites
 
