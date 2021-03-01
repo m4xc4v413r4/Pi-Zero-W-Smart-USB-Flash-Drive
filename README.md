@@ -54,7 +54,7 @@ Step 5. Copy the *wpa_supplicant.conf* file to the boot partion of the SD card.
 
 On the Pi Zero W, you’ll see two micro USB ports. One is marked ‘USB’ and the other ‘PWR IN’. You can supply power through either port, but the USB port is for data as well. There are two options.
 
-You can connect your 3D printer into the Pi Zero W USB port, not the PWR IN port, using a standard micro USB cable. The cable will both supply power from the printer and make the USB data connection. The disadvantage is that the printer must be switched on to supply power to the Pi. When someone turns the printer off, the Pi will also lose power, which cwill allow make it no longer available on teh network.
+You can connect your 3D printer into the Pi Zero W USB port, not the PWR IN port, using a standard micro USB cable. The cable will both supply power from the printer and make the USB data connection. The disadvantage is that the printer must be switched on to supply power to the Pi. When someone turns the printer off, the Pi will also lose power, which cwill allow make it no longer available on the network.
 
 Alternatively, you can connect a separate, always-on power supply to the PWR IN port, and use a slightly modified micro USB cable to connect the the printer to the USB port. The modification is to cut the red wire inside the micro USB cable. This protects the Pi from damage that could be caused by drawing power from two different power sources. The advantage of this method is that the Pi is powered independently from the printer. It will be available on the network even if the printer is off, and there is a reduced risk of sudden power loss and SD card corruption.
 
@@ -72,7 +72,7 @@ In Windows, you can bring up Explorer (Windows key + E) and type \3dprinter (or 
 
 On macOS, the Raspberry Pi will show up in the Finder sidebar. Alternatively, from the Finder menu, select Go Connect to server (Apple key + K) and type smb://3dprinteras (or smb://<<IP ADDRESS>>) as the server address.
 
-Once connected, you will see a shared named _USB_ where you can load your files. In order for your updaed to appear on teh printer, it must first disconnect from teh printer and then reconnect. Whenever you copy files over to the network share, or delete them, the USB device should automatically reconnect to the printer after 30 seconds of inactivity.
+Once connected, you will see a shared named _USB_ where you can load your files. In order for your updaed to appear on the printer, it must first disconnect from the printer and then reconnect. Whenever you copy files over to the network share, or delete them, the USB device should automatically reconnect to the printer after 30 seconds of inactivity.
 
 
 
