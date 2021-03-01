@@ -64,7 +64,7 @@ Connect the Pi Zero W USB port to the printer using your chosen method, power ev
 
 ## Connecting to the Network Drive
 
-Default Host Name: 
+Default Host Name: 3dprinter
 
 Now we can try to access the share from a Windows PC or a Mac. You’ll need the host name the Raspberry Pi is using or it's IP Address. By default the host name will be **3DPRINTER**.
 
@@ -81,6 +81,7 @@ Once connected, you will see a shared named _USB_ where you can load your files.
 The following optional configurations can be made from the Pi console, or over SSH.
 
 Default userID: pi
+
 Default password: raspberry
 
 #### Enabling the ANYCUBIC WIFI service
