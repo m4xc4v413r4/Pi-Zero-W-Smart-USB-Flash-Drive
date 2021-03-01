@@ -10,7 +10,8 @@ I based this project on the work documented in the MagPi magazine [article](http
 * Remotely accessible USB device (uploading, deleting)
 * 2GB shared storage pre-configured (Default)
 * Can be used as a USB drive on any device (including Mac, Windows, TV, and 3D printers)
-* After 30 seconds the Pi automatically disconnects (unplugs) and reconencts the USB interface so your changes appear for your target device
+* After updates on the network-share, the Pi waits 30 seconds and then automatically disconnects (unplugs) 
+  and reconnects the USB interface so changes appear on the target device
 * Create ANYCUBIC WIFI.txt file based on the Raspberry Pi's configuration
 
 ### 3D Printer Support
