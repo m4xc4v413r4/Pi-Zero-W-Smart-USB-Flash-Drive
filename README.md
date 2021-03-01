@@ -12,9 +12,13 @@ This project is not an original idea.  It is based on the work documented in the
 * Can be used as a USB drive on any device (including Mac, Windows, TV, and 3D printers)
 * Create ANYCUBIC WIFI.txt file based on the Raspberry PI's configuration
 
-### Printer Support
+### 3D Printer Support
 
-This project should work for most (if not all) 3D printers.  However, it was created with the [ANYCUBIC Photon Mono X](https://www.anycubic.com/products/photon-mono-x-resin-printer) in mind. There is an optional service that can be enabled to dynamically create a WIFI.txt file in the ANYCUBIC format to help configure the printer to match the network configured on the Raspberry Pi W.
+This project should work for most (if not all) 3D printers as a USB drive.  
+
+However, there is an additional feature for the [ANYCUBIC Photon Mono X](https://www.anycubic.com/products/photon-mono-x-resin-printer) printer. There is an optional service that can be enabled to dynamically create a WIFI.txt file in the ANYCUBIC format to help configure the printer to match the network configuration on the Raspberry Pi W.
+
+If don't have other printers to test, so I don't know how they are configured.  If they are similar, I'm happy to work with you add support in a furutre release. Open an issue and make a suggestion.
 
 ### Prerequisites
 
