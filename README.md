@@ -14,7 +14,7 @@ This project is not an original idea.  It is based on the work documented in the
 
 ### 3D Printer Support
 
-This project should work for most (if not all) 3D printers as a USB drive.  
+This project should work for most (if not all) 3D printers as a USB drive.
 
 However, there is an additional feature for the [ANYCUBIC Photon Mono X](https://www.anycubic.com/products/photon-mono-x-resin-printer) printer. There is an optional service that can be enabled to dynamically create a WIFI.txt file in the ANYCUBIC format to help configure the printer to match the network configuration on the Raspberry Pi W.
 
@@ -95,7 +95,7 @@ Default password: raspberry
 
 ### Change the size of the USB drive (based on avaialbe space)
 
-By Default, the USB drive is configured as a 2GB drive.  This is set to accomidate smaller SD Cards.  however, you can change this by recreating the image file on the Raspberry Pi.  
+By Default, the USB drive is configured as a 2GB drive.  This is set to accomidate smaller SD Cards.  however, you can change this by recreating the image file on the Raspberry Pi.
 
 Step 1. Login to the Raspberry Pi using the UserID/Password combination provided above.
 
@@ -115,14 +115,14 @@ sudo rm /home/pi/USB_Share/usbdisk.img
 ```
 Step 5. Check the avaialbe free space
 
-The command df -h shows your disk space usage. Look at the Avail column for /dev/root to see how much free space you have. 
+The command df -h shows your disk space usage. Look at the Avail column for /dev/root to see how much free space you have.
 ```
 df -h
 ```
 
 Step 6. Create a new disk image file
 
-The command below will create an empty 2GB binary file, change the count=2048 parameter to your new size (i.e., 10 GB = 10240, 25 GB = 25600, 48 GB = 49152). **keep a couple GB free**; if you fill the card completely full the image will become corupt while running. 
+The command below will create an empty 2GB binary file, change the count=2048 parameter to your new size (i.e., 10 GB = 10240, 25 GB = 25600, 48 GB = 49152). **keep a couple GB free**; if you fill the card completely full the image will become corupt while running.
 
 Creating the disk image will take a long time to complete. Seriously, walk away... the Pi W is slow, but it will finish.
 ```
