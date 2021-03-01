@@ -1,16 +1,16 @@
 # Pi Zero W Smart USB Flash Drive
-SMB enabled network share that appears as a USB drive to connected device
+SMB enabled network share that appears as a USB drive to a connected device
 
 ### Acknowledgements
 
-This project is based on the work documented in the MagPi magazine [article](https://magpi.raspberrypi.org/articles/pi-zero-w-smart-usb-flash-drive) by the same name.  It was written by [Russell Barnes](https://magpi.raspberrypi.org/articles/author/77pb3df8MQLs3i8qTd0C8Q). It also barrows some ideas from this [project](https://github.com/gilesdavison/RadaDASH) by [Giles Davison](https://github.com/gilesdavison).
+I based this project on the work documented in the MagPi magazine [article](https://magpi.raspberrypi.org/articles/pi-zero-w-smart-usb-flash-drive) by the same name.  It was written by [Russell Barnes](https://magpi.raspberrypi.org/articles/author/77pb3df8MQLs3i8qTd0C8Q). It also borrows some ideas from this [project](https://github.com/gilesdavison/RadaDASH) by [Giles Davison](https://github.com/gilesdavison).
 
 ### Features
 
-* Remotly accessabel USB device (uploading, deleting)
-* 2GB shared storage pre configured (default)
+* Remotely accessible USB device (uploading, deleting)
+* 2GB shared storage pre-configured (Default)
 * Can be used as a USB drive on any device (including Mac, Windows, TV, and 3D printers)
-* Create ANYCUBIC WIFI.txt file based on the Raspberry PI's configuration
+* Create ANYCUBIC WIFI.txt file based on the Raspberry Pi's configuration
 
 ### 3D Printer Support
 
@@ -18,7 +18,7 @@ This project should work for most (if not all) 3D printers as a USB drive.
 
 However, there is an additional feature for the [ANYCUBIC Photon Mono X](https://www.anycubic.com/products/photon-mono-x-resin-printer) printer. There is an optional service that can be enabled to dynamically create a WIFI.txt file in the ANYCUBIC format to help configure the printer to match the network configuration on the Raspberry Pi W.
 
-If don't have other printers to test, so I don't know how they are configured.  If they are similar, I'm happy to work with you add support in a furutre release. Open an issue and make a suggestion.
+I don't have other printers to test, so I don't know how they are configured.  If they are similar, I'm happy to work with you add support in a future release. Open an issue and make a suggestion.
 
 ### Prerequisites
 
@@ -36,7 +36,7 @@ If don't have other printers to test, so I don't know how they are configured.  
 3. Manage files on the Raspberry Pi from a network share (SMB://)
 4. Access the files from the USB interface (after 30 sec)
 
-__* Note: Do not add/remove files while you are printing/watching a file from teh USB drive.  When you make changes to the stored files the USB will appear to unplug and reconenct.  This will disrupt any current files being used. *__
+__* Note: Do not add/remove files while you are printing/watching a file from the USB drive.  When you make changes to the stored files, the USB will appear to unplug and reconnect.  This will disrupt any current files being used. *__
 
 
 # Setup Instructions
@@ -54,18 +54,18 @@ Step 3. Copy Image to SD Card
 
 Step 4. Edit the [wpa_supplicant.conf](https://github.com/tds2021/Pi-Zero-W-Smart-USB-Flash-Drive/blob/main/wpa_supplicant.conf) file provided, changing the placeholders network and password to your wireless networks SSID and password.
 
-Step 5. Copy the *wpa_supplicant.conf* file to the boot partion of the SD card.
+Step 5. Copy the *wpa_supplicant.conf* file to the boot partition of the SD card.
 
 
 ### Powering the Raspberry Pi
 
-On the Pi Zero W, you’ll see two micro USB ports. One is marked ‘USB’ and the other ‘PWR IN’. You can supply power through either port, but the USB port is for data as well. There are two options.
+On the Pi Zero W, you'll see two micro USB ports. One is marked 'USB' and the other 'PWR IN.' You can supply power through either port, but the USB port is for data as well. There are two options.
 
-You can connect your 3D printer into the Pi Zero W USB port, not the PWR IN port, using a standard micro USB cable. The cable will both supply power from the printer and make the USB data connection. The disadvantage is that the printer must be switched on to supply power to the Pi. When someone turns the printer off, the Pi will also lose power, which cwill allow make it no longer available on the network.
+You can connect your 3D printer into the Pi Zero W USB port, not the PWR IN port, using a standard micro USB cable. The cable will both supply power from the printer and make the USB data connection. The disadvantage is that the printer must be switched on to supply power to the Pi. When someone turns the printer off, the Pi will also lose power, which will also make it no longer available on the network.
 
-Alternatively, you can connect a separate, always-on power supply to the PWR IN port, and use a slightly modified micro USB cable to connect the the printer to the USB port. The modification is to cut the red wire inside the micro USB cable. This protects the Pi from damage that could be caused by drawing power from two different power sources. The advantage of this method is that the Pi is powered independently from the printer. It will be available on the network even if the printer is off, and there is a reduced risk of sudden power loss and SD card corruption.
+Alternatively, you can connect a separate, always-on power supply to the PWR IN port and use a slightly modified micro USB cable to connect the printer to the USB port. The modification is to cut the red wire inside the micro USB cable. This protects the Pi from damage that could be caused by drawing power from two different power sources. The advantage of this method is that the Pi is powered independently from the printer. It will be available on the network even if the printer is off, and there is a reduced risk of sudden power loss and SD card corruption.
 
-You might want to test the system with the first option, and then move onto the second when you want a more permanent setup. **Don’t forget to cut the red wire if you use the second option.**
+You might want to test the system with the first option and then move onto the second when you want a more permanent setup. ** Don't forget to cut the red wire if you use the second option.**
 
 Connect the Pi Zero W USB port to the printer using your chosen method, power everything up.
 
@@ -74,28 +74,28 @@ Connect the Pi Zero W USB port to the printer using your chosen method, power ev
 
 Default Host Name: 3dprinter
 
-Now we can try to access the share from a Windows PC or a Mac. You’ll need the host name the Raspberry Pi is using or it's IP Address. By default the host name will be **3DPRINTER**.
+Now we can try to access the share from a Windows PC or a Mac. You'll need the hostname the Raspberry Pi is using or its IP Address. By default, the hostname will be **3DPRINTER**.
 
 In Windows, you can bring up Explorer (Windows key + E) and type \\3dprinter (or \\<<IP ADDRESS>>) into the address bar at the top. The Run dialogue also works (Windows key + R).
 
 On macOS, the Raspberry Pi will show up in the Finder sidebar. Alternatively, from the Finder menu, select Go Connect to server (Apple key + K) and type smb://3dprinteras (or smb://<<IP ADDRESS>>) as the server address.
 
-Once connected, you will see a shared named _USB_ where you can load your files. In order for your updaed to appear on the printer, it must first disconnect from the printer and then reconnect. Whenever you copy files over to the network share, or delete them, the USB device should automatically reconnect to the printer after 30 seconds of inactivity.
+Once connected, you will see a shared named _USB_ where you can load your files. For your update to appear on the printer, it must first disconnect from the printer and then reconnect. Whenever you copy files over to the network-share, or delete them, the USB device should automatically reconnect to the printer after 30 seconds of inactivity.
 
 
 
 # Optional configurations
 
-The following optional configurations can be made from the Pi console, or over SSH.
+The following optional configurations can be made from the Pi console or over SSH.
 
 Default userID: pi
 
 Default password: raspberry
 
 
-### Change the size of the USB drive (based on avaialbe space)
+### Change the size of the USB drive (based on available space)
 
-By Default, the USB drive is configured as a 2GB drive.  This is set to accomidate smaller SD Cards.  however, you can change this by recreating the image file on the Raspberry Pi.
+By default, the USB drive is configured as a 2GB drive.  This is set to accommodate smaller SD Cards. However, you can change this by recreating the image file on the Raspberry Pi.
 
 Step 1. Login to the Raspberry Pi using the UserID/Password combination provided above.
 
@@ -104,7 +104,7 @@ Step 2. Stop the USB OTG service
 sudo modprobe -r g_mass_storage
 ```
 
-Step 3. Unmount the exisitng disk image
+Step 3. Unmount the existing disk image
 ```
 sudo umount /home/pi/USB_Share/upload
 ```
@@ -113,7 +113,7 @@ Step 4. Remove the existing disk image file
 ```
 sudo rm /home/pi/USB_Share/usbdisk.img
 ```
-Step 5. Check the avaialbe free space
+Step 5. Check the available free space
 
 The command df -h shows your disk space usage. Look at the Avail column for /dev/root to see how much free space you have.
 ```
@@ -122,7 +122,7 @@ df -h
 
 Step 6. Create a new disk image file
 
-The command below will create an empty 2GB binary file, change the count=2048 parameter to your new size (i.e., 10 GB = 10240, 25 GB = 25600, 48 GB = 49152). **keep a couple GB free**; if you fill the card completely full the image will become corupt while running.
+The command below will create an empty 2GB binary file, change the count=2048 parameter to your new size (i.e., 10 GB = 10240, 25 GB = 25600, 48 GB = 49152). **keep a couple of GB free**; if you fill the card completely full, the image will become corrupt while running.
 
 Creating the disk image will take a long time to complete. Seriously, walk away... the Pi W is slow, but it will finish.
 ```
@@ -151,7 +151,7 @@ sudo reboot
 
 ### Changing the Host Name
 
-By default, the USB device will be named #DPRINTER.  However, you can cahnge this if you wish by updating the hostname on the Pi.
+By default, the USB device will be named #DPRINTER.  However, you can change this if you wish by updating the hostname on the Pi.
 
 Step 1. Login to the Raspberry Pi using the UserID/Password combination provided above.
 
@@ -174,7 +174,7 @@ sudo reboot
 
 ### Enabling the ANYCUBIC WIFI service
 
-The ANYCUBIC Mono X printer has built in WIFI capabilites.  This printer option is configured using a text file named _WIFI.txt_ that is _printed_ on the printer.  If you wish to have this file automatically created and added to the avaialbe files on the USB drive, based on what was configured in the wpa_supplicant.conf file, follow these instructions.
+The ANYCUBIC Mono X printer has built-in WIFI capabilities.  This printer option is configured using a text file named _WIFI.txt_ that is _printed_ on the printer.  If you wish to have this file automatically created and added to the available files on the USB drive, based on what was configured in the wpa_supplicant.conf file, follow these instructions.
 
 Step 1. Login to the Raspberry Pi using the UserID/Password combination provided above.
 
