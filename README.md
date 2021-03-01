@@ -82,7 +82,7 @@ On macOS, the Raspberry Pi will show up in the Finder sidebar. Alternatively, fr
 
 Once connected, you will see a shared named _USB_ where you can load your files. For your update to appear on the printer, it must first disconnect from the printer and then reconnect. Whenever you copy files over to the network-share, or delete them, the USB device should automatically reconnect to the printer after 30 seconds of inactivity.
 
-
+**After you add files to the drive, you need to wait 30 seconds. After that, the Pi will disconenct and re-connect the USB interface so your changes can appear**
 
 # Optional configurations
 
