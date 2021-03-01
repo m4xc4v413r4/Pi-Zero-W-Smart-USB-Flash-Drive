@@ -96,11 +96,6 @@ sudo systemctl enable monox_wifi.service
 sudo systemctl start monox_wifi.service
 ```
 
-Step 3. Restart the Raspberry Pi
-```
-sudo reboot
-```
-
 
 #### Changing the Host Name
 
@@ -139,12 +134,12 @@ sudo modprobe -r g_mass_storage
 
 Step 3. Unmount the exisitng disk image
 ```
-sudo umount /home/pi/USB_share/upload
+sudo umount /home/pi/USB_Share/upload
 ```
 
 Step 4. Remove the existing disk image file
 ```
-sudo rm /home/pi/USB_share/usbdisk.img
+sudo rm /home/pi/USB_Share/usbdisk.img
 ```
 Step 5. Check the avaialbe free space
 
@@ -157,12 +152,12 @@ Step 6. Create a new disk image file
 
 The command below will create an empty 2GB binary file (change the count=2048 parameter if you want a different size). **keep a couple GB free**; if you fill the card completely full the image will become corupt while running. This will take a long time to complete; the larger the file site the longer it will take.
 ```
-sudo dd bs=1M if=/dev/zero of=/home/pi/USB_share/usbdisk.img count=2048
+sudo dd bs=1M if=/dev/zero of=/home/pi/USB_Share/usbdisk.img count=2048
 ```
 
 Step 7. Formate the disk image as FAT32
 ```
-sudo mkdosfs /home/pi/USB_share/usbdisk.img -F 32 -I
+sudo mkdosfs /home/pi/USB_Share/usbdisk.img -F 32 -I
 ```
 
 Step 8. Remount the disk image
@@ -172,7 +167,7 @@ sudo mount -a
 
 Step 9. Start the USB OTG service
 ```
-sudo modprobe g_mass_storage file=/home/pi/USB_share/usbdisk.img stall=0 ro=0 removable=1
+sudo modprobe g_mass_storage file=/home/pi/USB_Share/usbdisk.img stall=0 ro=0 removable=1
 ```
 
 Step 10. Restart the Raspberry Pi
