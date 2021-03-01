@@ -9,7 +9,7 @@ This project is not an original idea.  It is based on the work documented in the
 
 * Remotly accessabel USB device (uploading, deleting)
 * 2GB shared storage pre configured (default)
-* Can be used as a USB drive on and device (including Mac, Windows, TV, and 3D printers)
+* Can be used as a USB drive on any device (including Mac, Windows, TV, and 3D printers)
 * Create ANYCUBIC WIFI.txt file based on the Raspberry PI's configuration
 
 ### Printer Support
