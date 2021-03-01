@@ -100,7 +100,7 @@ sudo systemctl start monox_wifi.service
 
 #### Changing the Host Name
 
-By decault, teh USB device will be named #DPRINTER.  However, you can cahnge this if you wish by updating teh hostname on the Pi.
+By default, the USB device will be named #DPRINTER.  However, you can cahnge this if you wish by updating the hostname on the Pi.
 
 Step 1. Login to the Raspberry Pi using the UserID/Password combination provided above.
 
@@ -124,7 +124,7 @@ sudo reboot
 
 #### Change the size of the USB drive (based on avaialbe space)
 
-By Default, the USB drive is configured as a 2GB drive.  This is set to accomidate smaller SD Cards.  however, you can change this by recreatign the image file on the Raspberry Pi.  
+By Default, the USB drive is configured as a 2GB drive.  This is set to accomidate smaller SD Cards.  however, you can change this by recreating the image file on the Raspberry Pi.  
 
 Step 1. Login to the Raspberry Pi using the UserID/Password combination provided above.
 
