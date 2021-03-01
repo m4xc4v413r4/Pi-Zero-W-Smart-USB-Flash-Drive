@@ -68,7 +68,7 @@ Default Host Name: 3dprinter
 
 Now we can try to access the share from a Windows PC or a Mac. You’ll need the host name the Raspberry Pi is using or it's IP Address. By default the host name will be **3DPRINTER**.
 
-In Windows, you can bring up Explorer (Windows key + E) and type \3dprinter (or \<<IP ADDRESS>>) into the address bar at the top. The Run dialogue also works (Windows key + R).
+In Windows, you can bring up Explorer (Windows key + E) and type \\3dprinter (or \\<<IP ADDRESS>>) into the address bar at the top. The Run dialogue also works (Windows key + R).
 
 On macOS, the Raspberry Pi will show up in the Finder sidebar. Alternatively, from the Finder menu, select Go Connect to server (Apple key + K) and type smb://3dprinteras (or smb://<<IP ADDRESS>>) as the server address.
 
