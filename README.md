@@ -151,7 +151,7 @@ df -h
 
 Step 6. Create a new disk image file
 
-The command below will create an empty 2GB binary file (change the count=2048 parameter if you want a different size). **keep a couple GB free**; if you fill the card completely full the image will become corupt while running. This will take a long time to complete; the larger the file site the longer it will take.
+The command below will create an empty 2GB binary file (change the count=2048 parameter if you want a different size). **keep a couple GB free**; if you fill the card completely full the image will become corupt while running. This will take a long time to complete; the larger the file site the longer it will take. Seriously, walk away... the Pi W is slow to do this, but it will finish.
 ```
 sudo dd bs=1M if=/dev/zero of=/home/pi/USB_Share/usbdisk.img count=2048
 ```
