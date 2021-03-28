@@ -128,7 +128,7 @@ The command below will create an empty 2GB binary file, change the count=2048 pa
 
 Creating the disk image will take a long time to complete. Seriously, walk away... the Pi W is slow, but it will finish.
 ```
-sudo dd bs=1M if=/dev/zero of=/home/pi/USB_Share/usbdisk.img count=2048
+sudo dd bs=512 if=/dev/zero of=/home/pi/USB_Share/usbdisk.img count=2048
 ```
 
 Step 7. Formate the disk image as FAT32
