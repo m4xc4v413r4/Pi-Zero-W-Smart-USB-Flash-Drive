@@ -124,11 +124,11 @@ df -h
 
 Step 6. Create a new disk image file
 
-The command below will create an empty 2GB binary file, change the count=2048 parameter to your new size (i.e., 10 GB = 10240, 25 GB = 25600, 48 GB = 49152). **keep a couple of GB free**; if you fill the card completely full, the image will become corrupt while running.
+The command below will create an empty 2GB binary file, change the count=2048 parameter to your new size (i.e., 10 GB = 20480, 25 GB = 51200, 48 GB = 98304). **keep a couple of GB free**; if you fill the card completely full, the image will become corrupt while running.
 
 Creating the disk image will take a long time to complete. Seriously, walk away... the Pi W is slow, but it will finish.
 ```
-sudo dd bs=1M if=/dev/zero of=/home/pi/USB_Share/usbdisk.img count=2048
+sudo dd bs=512 if=/dev/zero of=/home/pi/USB_Share/usbdisk.img count=4096
 ```
 
 Step 7. Formate the disk image as FAT32
