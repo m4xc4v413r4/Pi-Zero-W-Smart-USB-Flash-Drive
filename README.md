@@ -27,7 +27,12 @@ I based this project on the work documented in the MagPi magazine [article](http
   * RPi power management (reboot / shutdown)
   * RPi eject / reset virtual USP drive
 
-![Summary Example](https://github.com/tds2021/Pi-Zero-W-Smart-USB-Flash-Drive/blob/main/screenshots/USB-Share-Summary.png)
+![Summary Example](https://github.com/tds2021/Pi-Zero-W-Smart-USB-Flash-Drive/blob/main/screenshots/USB-Share-Summary.png =300x340)
+
+![Mono X Example](https://github.com/tds2021/Pi-Zero-W-Smart-USB-Flash-Drive/blob/main/screenshots/USB-Share-Mono-X-Control.png =300x340)
+
+
+
 
 ### 3D Printer Support
 
