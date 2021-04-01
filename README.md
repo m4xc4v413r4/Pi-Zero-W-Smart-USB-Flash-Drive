@@ -6,13 +6,26 @@ SMB enabled network share that appears as a USB drive to a connected device
 I based this project on the work documented in the MagPi magazine [article](https://magpi.raspberrypi.org/articles/pi-zero-w-smart-usb-flash-drive) by the same name.  It was written by [Russell Barnes](https://magpi.raspberrypi.org/articles/author/77pb3df8MQLs3i8qTd0C8Q). It also borrows some ideas from this [project](https://github.com/gilesdavison/RadaDASH) by [Giles Davison](https://github.com/gilesdavison).
 
 ### Features
-
+#### Version 1.0
 * Remotely accessible USB device (uploading, deleting)
 * 2GB shared storage pre-configured (Default)
 * Can be used as a USB drive on any device (including Mac, Windows, TV, and 3D printers)
 * After updates on the network-share, the Pi waits 30 seconds and then automatically disconnects (unplugs) 
   and reconnects the USB interface so changes appear on the target device
 * Create ANYCUBIC WIFI.txt file based on the Raspberry Pi's configuration
+
+#### Version 2.1.5
+* Web-based management portal
+  * Local storge management (Upload/delete)
+  * Network scanning
+  * RPi Camera Streaming
+  * Mono X printing control
+  * Settings
+    * Update hostname
+    * Enable camera streaming
+    * Enable Mono X features
+  * RPi power management (reboot / shutdown)
+  * RPi eject / reset virtual USP drive
 
 ### 3D Printer Support
 
@@ -45,7 +58,7 @@ __* Note: Do not add/remove files while you are printing/watching a file from th
 
 ### Create SD Card
 
-Step 1. Download the latest [release](https://github.com/tds2021/Pi-Zero-W-Smart-USB-Flash-Drive/releases/tag/v1.0-beta).
+Step 1. Download the latest [release](https://github.com/tds2021/Pi-Zero-W-Smart-USB-Flash-Drive/releases/tag/v2.1-beta).
 
 Step 2. Extract the image from the zip archive.
 
@@ -72,15 +85,26 @@ You might want to test the system with the first option and then move onto the s
 Connect the Pi Zero W USB port to the printer using your chosen method, power everything up.
 
 
+
+### Connection to the Management Portal (New)
+
+Default URL: http://3dprinter.local or http://[IP ADDRESS]
+
+Port: 80
+
+After the Raspberry Pi has fully booted, you can now access the management protal from any local network web browser. This all featurs of the USB Sahre devices can be managed from this portal other than re-sizing the size fo teh USB drive partition; that must still be done from  command line.
+
+
+
 ### Connecting to the Network Share
 
 Default Host Name: 3dprinter
 
 Now we can try to access the share from a Windows PC or a Mac. You'll need the hostname the Raspberry Pi is using or its IP Address. By default, the hostname will be **3DPRINTER**.
 
-In Windows, you can bring up Explorer (Windows key + E) and type \\3dprinter (or \\<<IP ADDRESS>>) into the address bar at the top. The Run dialogue also works (Windows key + R).
+In Windows, you can bring up Explorer (Windows key + E) and type \\3dprinter (or \\[IP ADDRESS]) into the address bar at the top. The Run dialogue also works (Windows key + R).
 
-On macOS, the Raspberry Pi will show up in the Finder sidebar. Alternatively, from the Finder menu, select Go Connect to server (Apple key + K) and type smb://3dprinteras (or smb://<<IP ADDRESS>>) as the server address.
+On macOS, the Raspberry Pi will show up in the Finder sidebar. Alternatively, from the Finder menu, select Go Connect to server (Apple key + K) and type smb://3dprinter (or smb://[IP ADDRESS]) as the server address.
 
 Once connected, you will see a shared named _USB_ where you can load your files. For your update to appear on the printer, it must first disconnect from the printer and then reconnect. Whenever you copy files over to the network-share, or delete them, the USB device should automatically reconnect to the printer after 30 seconds of inactivity.
 
@@ -93,7 +117,6 @@ The following optional configurations can be made from the Pi console or over SS
 Default userID: pi
 
 Default password: raspberry
-
 
 ### Change the size of the USB drive (based on available space)
 
@@ -151,7 +174,7 @@ Step 10. Restart the Raspberry Pi
 sudo reboot
 ```
 
-### Changing the Host Name
+### Changing the Host Name (CLI)
 
 By default, the USB device will be named #DPRINTER.  However, you can change this if you wish by updating the hostname on the Pi.
 
@@ -174,7 +197,7 @@ Step 3. Restart the Raspberry Pi
 sudo reboot
 ```
 
-### Enabling the ANYCUBIC WIFI service
+### Enabling the ANYCUBIC WIFI service (CLI)
 
 The ANYCUBIC Mono X printer has built-in WIFI capabilities.  This printer option is configured using a text file named _WIFI.txt_ that is _printed_ on the printer.  If you wish to have this file automatically created and added to the available files on the USB drive, based on what was configured in the wpa_supplicant.conf file, follow these instructions.
 
