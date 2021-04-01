@@ -29,9 +29,6 @@ I based this project on the work documented in the MagPi magazine [article](http
 
 ![Summary Example](https://github.com/tds2021/Pi-Zero-W-Smart-USB-Flash-Drive/blob/main/screenshots/USB-Share-Summary.png =300x340)
 
-![Mono X Example](https://github.com/tds2021/Pi-Zero-W-Smart-USB-Flash-Drive/blob/main/screenshots/USB-Share-Mono-X-Control.png =300x340)
-
-
 
 
 ### 3D Printer Support
